@@ -98,88 +98,88 @@ startGameBtn.addEventListener("click", () => {
 
 //not related to Game
 
-const combineAddSubtract = (resultHandler, operation, ...numbers) => {
-  const validateNumber = (number) => {
-    return isNaN(number) ? 0 : number;
-  };
+// const combineAddSubtract = (resultHandler, operation, ...numbers) => {
+//   const validateNumber = (number) => {
+//     return isNaN(number) ? 0 : number;
+//   };
 
-  let sum = 0;
-  for (const el of numbers) {
-    if (operation === "ADD") {
-      sum += validateNumber(el);
-    } else {
-      sum -= validateNumber(el);
-    }
-  }
-  resultHandler(sum); //call back to the function passed as a parameter
-};
-
-const sumUp = (resultHandler, ...numbers) => {
-  const validateNumber = (number) => {
-    return isNaN(number) ? 0 : number;
-  };
-
-  let sum = 0;
-  for (const el of numbers) {
-    sum += validateNumber(el);
-  }
-  resultHandler(sum); //call back to the function passed as a parameter
-};
-
-// const subtractUp = function () {
 //   let sum = 0;
-//   for (const el of arguments) {
-//     //arguments is a keyword, we dont need to declare any parameters in the function's bracket "()"
-//     //don't use that, it's not a good practise
-//     sum -= el;
+//   for (const el of numbers) {
+//     if (operation === "ADD") {
+//       sum += validateNumber(el);
+//     } else {
+//       sum -= validateNumber(el);
+//     }
 //   }
-//   return sum;
+//   resultHandler(sum); //call back to the function passed as a parameter
 // };
 
-const subtractUp = (resultHandler, ...numbers) => {
-  let sum = 0;
-  for (const el of numbers) {
-    sum -= el;
-  }
+// const sumUp = (resultHandler, ...numbers) => {
+//   const validateNumber = (number) => {
+//     return isNaN(number) ? 0 : number;
+//   };
 
-  resultHandler(sum); //call back to the function passed as a parameter
-};
+//   let sum = 0;
+//   for (const el of numbers) {
+//     sum += validateNumber(el);
+//   }
+//   resultHandler(sum); //call back to the function passed as a parameter
+// };
 
-// call back function
-const showResult = (messageText, result) => {
-  alert(messageText + " " + result);
-};
+// // const subtractUp = function () {
+// //   let sum = 0;
+// //   for (const el of arguments) {
+// //     //arguments is a keyword, we dont need to declare any parameters in the function's bracket "()"
+// //     //don't use that, it's not a good practise
+// //     sum -= el;
+// //   }
+// //   return sum;
+// // };
 
-combineAddSubtract(
-  showResult.bind(this, "The result after adding these numbers are"),
-  "ADD",
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9
-);
-combineAddSubtract(
-  showResult.bind(this, "The result after adding these numbers are"),
-  "ADD",
-  2,
-  3,
-  4,
-  "hsbdhf",
-  6,
-  7,
-  "hvhs",
-  9
-);
-// console.log(subtractUp(5, 10, 15, 20));
-combineAddSubtract(
-  showResult.bind(this, "The result after subtracting these numbers are"),
-  "SUBTRACT",
-  5,
-  10,
-  15,
-  20
-);
+// const subtractUp = (resultHandler, ...numbers) => {
+//   let sum = 0;
+//   for (const el of numbers) {
+//     sum -= el;
+//   }
+
+//   resultHandler(sum); //call back to the function passed as a parameter
+// };
+
+// // call back function
+// const showResult = (messageText, result) => {
+//   alert(messageText + " " + result);
+// };
+
+// combineAddSubtract(
+//   showResult.bind(this, "The result after adding these numbers are"),
+//   "ADD",
+//   2,
+//   3,
+//   4,
+//   5,
+//   6,
+//   7,
+//   8,
+//   9
+// );
+// combineAddSubtract(
+//   showResult.bind(this, "The result after adding these numbers are"),
+//   "ADD",
+//   2,
+//   3,
+//   4,
+//   "hsbdhf",
+//   6,
+//   7,
+//   "hvhs",
+//   9
+// );
+// // console.log(subtractUp(5, 10, 15, 20));
+// combineAddSubtract(
+//   showResult.bind(this, "The result after subtracting these numbers are"),
+//   "SUBTRACT",
+//   5,
+//   10,
+//   15,
+//   20
+// );
